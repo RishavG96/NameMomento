@@ -17,6 +17,8 @@ struct AddUser: View {
     
     @State private var name: String = ""
     
+    let locationFetcher = LocationFetcher()
+    
     let savePath = FileManager.documentsDirectory.appendingPathComponent("SavedPersons")
     
     var body: some View {
@@ -34,6 +36,7 @@ struct AddUser: View {
                     image?
                         .resizable()
                         .scaledToFit()
+                        .frame(width: 500, height: 500)
                 }
                 .onTapGesture {
                     showingImagePicker = true
@@ -61,12 +64,21 @@ struct AddUser: View {
     func loadImage() {
         guard let inputImage = inputImage else { return }
         image = Image(uiImage: inputImage)
+        self.locationFetcher.start()
     }
     
     func save() {
         guard let inputImage = inputImage else { return }
+        
         if let jpegData = inputImage.jpegData(compressionQuality: 0.8) {
-            let createdUser = User(name: name, image: jpegData)
+            var createdUser = User(name: name, image: jpegData)
+            if let location = self.locationFetcher.lastKnownLocation {
+                print("Your location is \(location)")
+                createdUser.latitude = location.latitude
+                createdUser.longitude = location.longitude
+            } else {
+                print("Your location is unknown")
+            }
             userObject.users.append(createdUser)
         }
         

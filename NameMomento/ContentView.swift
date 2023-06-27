@@ -22,7 +22,7 @@ struct ContentView: View {
                 } else {
                     List(userObject.users.sorted()) { user in
                         NavigationLink {
-                            DetailsView(user: user)
+                            DetailsView(userObject: userObject, user: user)
                         } label: {
                             HStack {
                                 Image(uiImage: user.getImage)

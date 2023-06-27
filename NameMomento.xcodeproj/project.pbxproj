@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		BD7702A12A49E15E008CEC53 /* FileManager+DocumentsDirectory.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7702A02A49E15E008CEC53 /* FileManager+DocumentsDirectory.swift */; };
 		BD7702A32A49E7C6008CEC53 /* DetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7702A22A49E7C6008CEC53 /* DetailsView.swift */; };
+		BD7702A52A4A63A2008CEC53 /* LocationFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7702A42A4A63A2008CEC53 /* LocationFetcher.swift */; };
 		BDDE1F472A49D7DE00FAE84B /* NameMomentoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDE1F462A49D7DE00FAE84B /* NameMomentoApp.swift */; };
 		BDDE1F492A49D7DE00FAE84B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDE1F482A49D7DE00FAE84B /* ContentView.swift */; };
 		BDDE1F4B2A49D7DF00FAE84B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BDDE1F4A2A49D7DF00FAE84B /* Assets.xcassets */; };
@@ -22,6 +23,7 @@
 /* Begin PBXFileReference section */
 		BD7702A02A49E15E008CEC53 /* FileManager+DocumentsDirectory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FileManager+DocumentsDirectory.swift"; sourceTree = "<group>"; };
 		BD7702A22A49E7C6008CEC53 /* DetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsView.swift; sourceTree = "<group>"; };
+		BD7702A42A4A63A2008CEC53 /* LocationFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationFetcher.swift; sourceTree = "<group>"; };
 		BDDE1F432A49D7DE00FAE84B /* NameMomento.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NameMomento.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDDE1F462A49D7DE00FAE84B /* NameMomentoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameMomentoApp.swift; sourceTree = "<group>"; };
 		BDDE1F482A49D7DE00FAE84B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 		BDDE1F452A49D7DE00FAE84B /* NameMomento */ = {
 			isa = PBXGroup;
 			children = (
+				BD7702A42A4A63A2008CEC53 /* LocationFetcher.swift */,
 				BDDE1F5A2A49DCD600FAE84B /* ImagePicker.swift */,
 				BDDE1F462A49D7DE00FAE84B /* NameMomentoApp.swift */,
 				BDDE1F482A49D7DE00FAE84B /* ContentView.swift */,
@@ -163,6 +166,7 @@
 				BD7702A32A49E7C6008CEC53 /* DetailsView.swift in Sources */,
 				BDDE1F552A49D99600FAE84B /* User.swift in Sources */,
 				BDDE1F592A49DB7F00FAE84B /* AddUser.swift in Sources */,
+				BD7702A52A4A63A2008CEC53 /* LocationFetcher.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -294,6 +298,7 @@
 				DEVELOPMENT_TEAM = DTW6Q39FPG;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "We want to show save contact location.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -323,6 +328,7 @@
 				DEVELOPMENT_TEAM = DTW6Q39FPG;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "We want to show save contact location.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
